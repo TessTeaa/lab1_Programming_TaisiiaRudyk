@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Головна сторінка</title>
+    <style>
+        /* Основні стилі */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #e1ccff;
+            font-family: Arial, sans-serif;
+            color: #333;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #4a2c84;
+        }
+
+        /* Стилі для кнопок */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: #4a2c84;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background-color 0.5s;
+        }
+
+        .button:hover {
+            background-color: #9f9846;
+            /*background-color: #491b5d;*/
+        }
+
+        /* Стилі для банерів */
+        .banner {
+            position: fixed;
+            height: 10vh; /* Висота банера */
+            width: 100%; /* Ширина банера */
+            background: radial-gradient(circle, rgba(155, 106, 222, 0.8) 50%, rgba(155, 106, 222, 0) 100%);
+        }
+
+        .banner.top {
+            top: 0; /* Банер зверху */
+        }
+
+        .banner.bottom {
+            bottom: 0; /* Банер знизу */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Верхній боковий банер -->
+    <div class="banner top"></div>
+    
+    <!-- Основний контент -->
+    <div class="container">
+        <h1>Виберіть задачу:</h1>
+        <div class="button-container">
+            <a href="{{ url_for('task1') }}" class="button">Пошук слів на "і" або "и"</a>
+            <a href="{{ url_for('task2') }}" class="button">Утворення ступенів прикметників</a>
+        </div>
+    </div>
+
+    <!-- Нижній боковий банер -->
+    <div class="banner bottom"></div>
+</body>
+</html>
+
