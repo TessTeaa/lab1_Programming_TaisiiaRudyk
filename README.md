@@ -1,4 +1,4 @@
-# lab1_Programming_TaisiiaRudyk
+# Programming_TaisiiaRudyk
 
 Вітаю у проекті!
 
